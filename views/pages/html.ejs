@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--socket.io-->
+   <!-- <script src="socket.io/socket.io.js"> </script> -->
+    <script src="http://localhost:8888/socket.io/socket.io.js"></script>
+    <!--kết nối các file-->  
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/style_IOT-3.css">
+    <title>IOT website</title>
+    <!--link java cho đồ thị-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script><!--đồng hồ-->
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <!--link java cho setting-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!--tên người thực hiện-start-->
+    <div class="row name_auther">
+        <div class=" col-12 "> 
+            <h3 class="text-success text-center ">Nguyễn Đắc Đạt- <b style="color:red">B19DCDT048</b></h3>
+            <figure class="highcharts-figure_clock">
+                <div id="container_clock"></div>
+            </figure>
+        </div>
+    </div>
+    <!--tên người thực hiện-end-->
+    <!--khối setting-start-->
+    <div class=" text-end  fixed-top" >
+        <button class="btn btn-secondary dropdown-toggle setting_img" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:white;">
+
+        </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href=""><ADdress>Quản trị viên<nav></nav></ADdress></a></li>
+            <li><a class="dropdown-item" href="../mang_cam_bien/mang_cam_bien.html">Phiên bản table</a></li>
+            <li><a class="dropdown-item" href="../mang_cam_bien -2/mang_cam_bien_div.html">phiên bản DIV</a></li>
+            <li><a class="dropdown-item" href="../mang_cam_bien-3/buoi3.html">Phiên bản bootraps</a></li>
+            <li><a class="dropdown-item" href="../profile_nhom/baitap3/hihi1.html">profile Nhóm</a></li>
+            <li><p class="dropdown-item" > chế độ sáng - tối
+                    <div id="vi_tri_switch_setting">
+                        <input type="checkbox" name="" class="switch-toggle" id="light-dark">
+                    </div>
+            </p></li> 
+            <li><a class="dropdown-item">
+                <button type="button" onclick="tai_lai_trang()">Tải lại trang</button>
+            </a></li>
+        </ul>
+    </div>
+    <!--khối setting-end-->
+    <!--khối div ngang -start-->
+    <div class="row " >
+        <div id="nhiet_do" class="col-3 boxn0">
+                <img src="./img/nhiet_ke_1.png">
+                <div class="icon_vt_dad">
+                    <div id="icon_nd_lv3" ></div>
+                    <div id="icon_nd_lv2" ></div>
+                    <div id="icon_nd_lv1" ></div>
+                </div>
+                    <div class="text-center" > 
+                    <i><b> Nhiệt độ</b></i>
+                        <div id="nd"></div>
+                    </div> 
+
+        </div>
+        <div id="do_am" class="col-3 boxn" >
+                <img src="./img/giot_nuoc_do_am.png" />
+                <div class="icon_vt_dad">
+                    <div id="icon_da_lv3"></div>
+                    <div id="icon_da_lv2"></div>
+                    <div id="icon_da_lv1"></div>
+                </div>
+                    <div class="text-center"> 
+                    <i><b> Độ ẩm</b></i>
+                        <div id="da"></div>
+                    </div>
+        </div>
+        <div id="khi_ga" class="col-3 boxn" >
+            <img src="./img/gg (3).jpg" />
+            <div class="icon_vt_dad">
+                <div id="icon_kg_lv3"></div>
+                <div id="icon_kg_lv2"></div>
+                <div id="icon_kg_lv1"></div>
+            </div>
+                    <div class="text-center"> 
+                    <i><b> khí gas</b></i>
+                        <div id="kg"></div>
+                    </div>
+        </div>
+        <div id="anh_sang" class="col-3 boxn" >
+            <img src="../img/1f506.png" />
+            <div class="icon_vt_dad">
+                <div id="icon_as_lv3"></div>
+                <div id="icon_as_lv2"></div>
+                <div id="icon_as_lv1"></div>
+            </div>
+                    <div class="text-center"> 
+                    <i><b> ánh sáng</b></i>
+                        <div id="as"></div>
+                    </div>
+        </div>
+    </div>
+    <!--khối div ngang -end-->
+    <!--khối div dọc -start-->
+    <div class="row">
+        <div id="do_thi" class="col-6" > 
+            <figure class="highcharts-figure">
+                <div id="container_spline"></div>
+            </figure>
+        </div>  
+        <div class="col-6">
+        <div class="row">
+            <div id="chong_trom" class="col-3 boxd1" >
+                <div id="style_img_chong_trom" class="c_t">    
+                </div>
+                    <div class="text-center"> 
+                        <i><b>Công tắc tổng</b></i>
+                    </div> 
+                    <div id="vi_tri_switch">
+                        <input id="switch_chong_trom" class="switch-toggle" type="checkbox" name=""  >
+                    </div> 
+            </div>
+            <div id="chieu_sang" class="col-3 boxd2" >
+                    <div id="style_img_chieu_sang" class="c_s">
+                        
+                    </div>
+                        <div class="text-center"> 
+                            <i><b>Thiết bị chiếu sáng</b></i>
+                        </div> 
+                        <div id="vi_tri_switch">
+                            <input id="switch_chieu_sang"  class="switch-toggle" type="checkbox" name="">
+                        </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="dinh_vi" class="col-3 boxd1" >
+                <div id="style_img_dinh_vi" class="d_v">
+                        
+                </div>
+                        <div class="text-center">
+                            <i><b>đợi phát triển thêm</b></i>
+                        </div>
+                        <div id="vi_tri_switch">
+                            <input  id="switch_dinh_vi" class="switch-toggle" type="checkbox" name="">
+                        </div>      
+            </div>
+            <div id="dien_lanh" class="col-3 boxd2" >
+               <div id="style_img_dien_lanh" class="d_l">
+                       
+                </div>
+                    <div class="text-center">
+                        <i><b>Thiết bị điện lanh</b></i>
+                    </div>
+                    <div id="vi_tri_switch">
+                        <input id="switch_dien_lanh" class="switch-toggle"  type="checkbox" name="">
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="camera" class="col-3 boxd1">
+                <div id="img_camera" >
+                        
+                </div>
+                        <div class="text-center">
+                            <i><b>camera-HOME</b></i>
+                        </div>
+                        
+            </div>
+            <div id="am_thanh" class="col-3 boxd2">
+                <div id="style_img_am_thanh" class="a_t">                       
+                </div>
+                        <div class="text-center">
+                            <i><b>Thiết bị âm thanh</b></i>
+                        </div>
+                        <div id="vi_tri_switch">
+                            <input type="checkbox" name="" class="switch-toggle" id="switch_am_thanh">
+                        </div>  
+            </div>
+        </div>            
+        </div>
+
+    </div>
+    <!--khối div dọc -end-->
+    <!----------link java_scritpt------------------------------------------------------------------------------------------>
+    <script src="/hieu_ung.js"></script>
+</body>
+<%- include("../partials/footer.ejs")%>
+</html>

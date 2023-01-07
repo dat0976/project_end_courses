@@ -1,0 +1,449 @@
+
+/*biến hiệu ứng động*/
+:root{
+    --transition-effect: 0.35s cubic-bezier(.28,-0.91,.8,2);
+}
+/*khối kết quả hiệu ứng switch---end*/
+body{ 
+    font-family:verdana;
+    background-image: url('./img/pngtree-globe-moon-world-planet-background-picture-image_363056.jpg');
+    background-attachment: fixed;
+    background-size: 120% 100%; 
+    background-size: cover;
+}
+body.dark{
+    background-image: url('./img/anh-nen-cong-nghe-3d-cho-powerpoint_012720772.jpg');
+}
+footer{
+    font-family: Verdana;
+    background-image: linear-gradient(to bottom ,rgb(3, 3, 3),rgb(110, 100, 100));
+    height: 200px;
+    margin: 30px 0 0 0;
+}
+div.name_author{
+    float: left; 
+    height: 0px;
+    margin: 30px;
+}
+/*khối div ngang sát mép ngoài bên trái*/
+div.boxn0{
+    margin: 10px 0px 0px 2.92358804%;
+    padding: auto;
+    width: 22%;
+    height:180px;
+    border-radius: 12px;
+    border: 3px outset;
+}
+/*các khối div ngang còn lại*/
+div.boxn{
+    margin: 10px 0px 0px 2.19269103%;
+    padding: auto;
+    width: 22%;
+    height:180px;
+    border-radius: 12px;
+    border: 3px outset;
+    background-size: 100% 100%;
+    background-size: cover;  
+}
+/*khối div dọc thứ 1 từ phải vào*/
+div.boxd1{
+    margin: 30px 0px 0px 4.38538206%;
+    width: 44%;
+    height:180px;
+    border-radius: 12px;
+    border: 3px outset;
+
+}
+/*khối div dọc thứ 2 (as)từ phải vào*/
+div.boxd2{
+    margin: 30px 0px 0px 4.38538206%;
+    width: 44%;
+    height:180px;
+    border-radius: 12px;
+    border: 3px outset;
+
+}
+/*thuộc tính ảnh*/
+img{
+    margin: 3% 0px 0px 0%;
+    opacity: 1;
+    width:30%;
+    border-radius: 20px; 
+}
+.setting_img{
+    width:5% ;
+    height:30px;
+    background-image: url('./img/setting_1.png');
+    background-size:100% 100%;
+    background-size:cover;
+    border-radius: 8px;
+}
+/*khối switch-start*/
+#vi_tri_switch_setting{
+    display: flex;
+    justify-content:end;
+    align-items:center;
+    min-height: 0vh;
+    margin: 0px 5px 0px 0px;
+}
+#vi_tri_switch{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 10px 5px 0px 0px;
+}
+.switch-toggle{
+    width: 17%;
+    height: 25px;
+    appearance: none;
+    background:#707b8a;
+    border-radius: 12.5px;
+    border: outset;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 16px rgba(0,0,0,.3);
+    transition:var(--transition-effect);
+}
+.switch-toggle::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top:1.5px;
+    left: 1.5px;
+    position: absolute;
+    background: #efe2bf;
+    box-shadow: 0px 0px 6px rgba(0,0,0,.3);
+    transition:var(--transition-effect);
+}
+.switch-toggle:checked{
+    background: #83dbff;
+}
+.switch-toggle:checked:before{
+    left: 57%;
+}
+/*khối switch-end*/
+/*khối kết quả hiệu ứng switch---start*/
+#style_img_am_thanh{
+    margin: 10px 0px 0px 0px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.8;
+    border-radius: 25%;   
+}
+div.a_t{
+    background-image: url('./img/loa_off_0.png');
+}
+div.change_a_t{
+    background-image: url('./img/loa_on.png');
+}
+#style_img_chieu_sang{
+    margin: 10px 0px 0px 10px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.8;
+    border-radius: 25%;
+}
+div.c_s{
+    background-image: url('./img/den_off.png');
+}
+div.change_c_s{
+    background-image: url('./img/den_on.png');
+}
+#style_img_dien_lanh{
+    margin: 10px 0px 0px 10px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.8;
+    border-radius: 25%;
+}
+div.d_l{
+    background-image: url('./img/dien_lanh_off.png');
+}
+div.change_d_l{
+    background-image: url('./img/dien_lanh_on.png');
+}
+#style_img_chong_trom{
+    margin: 10px 0px 0px 10px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.0;
+    border-radius: 25%;
+}
+div.c_t{
+    background-image: url('./img/chong_chom_off2.png');
+}
+div.change_c_t{
+    background-image: url('./img/chong_chom_on2.png');
+}
+#style_img_dinh_vi{
+    margin: 10px 0px 0px 10px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.0;
+    border-radius: 25%;
+}
+div.d_v{
+    background-image: url('./img/dinh_vi_off.png');
+}
+div.change_d_v{
+    background-image: url('./img/d_v_o.png');
+}
+/*khối hover*/
+
+/*khối id của các đơn vị trong trang-start*/
+/*khối đồ thị---start-------------------------------------------------------------------------*/
+/*--------------------------------spline------------------------------------*/
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 280px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+#container {
+    height: 400px;
+}
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #000;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #1169db;
+}
+/*---------------------------------spline-------------------------------------------*/
+#do_thi{
+    margin: 30px 0px 0px 2.92358804%;
+    padding: auto;
+    width: 46.192691%;
+    height: 600px;
+    border-radius: 12px;
+    border: 3px outset; 
+    background-color: #fff;
+}
+/*khối đồ thị -end----------------------------------------------------------------------------*/
+#nhiet_do{
+    background-image: linear-gradient(to bottom right,rgb(255, 251, 0),rgb(255, 115, 0));
+}
+#do_am{
+    background-image: linear-gradient(to bottom right,aqua ,blue); 
+}
+#khi_ga{
+    background-image: linear-gradient(to bottom right,#224422,green);
+}
+#anh_sang{
+    background-image: linear-gradient(to bottom right,#eeeb4c,rgb(223, 243, 40));
+}
+#am_thanh{
+    background-image: linear-gradient(to bottom right,rgb(255, 255, 255),rgb(9, 174, 224));
+}
+#chieu_sang{
+    background-image: linear-gradient(to bottom right,yellow ,#FFFAAE);
+}
+#dien_lanh{
+    background-image: linear-gradient(to bottom right,lightblue,aqua); 
+}
+#khac{
+    background-image: linear-gradient(to bottom right,brown,yellow); 
+}
+#img_khac{
+    margin: 10px 0px 0px 10px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.8;
+    border-radius: 25%;
+}
+#chong_trom{
+    background-image: linear-gradient(to right,#224422,rgb(172, 165, 165)); 
+}
+#dinh_vi{
+    background-image: linear-gradient(to bottom right,#c230c2,rgb(92, 233, 226)); 
+}
+#img_dinh_vi{
+    margin: 10px 0px 0px 10px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.8;
+    border-radius: 25%;
+}
+#camera{
+    background-image: linear-gradient(to bottom right,rgb(24, 104, 100),rgb(255, 255, 255)); 
+}
+#img_camera{
+    margin: 10px 0px 0px 10px;
+    width: 20%;
+    height: 30%;
+    background-size: 100% 100%;
+    opacity: 0.8;
+    border-radius: 25%;
+}
+/*khối id của các đơn vị trong trang--end*/
+/*khối vị trí icon cấp độ*/
+
+.icon_vt_dad{
+    float:right; 
+    width:17%; 
+    height: 80%;
+}
+.icon_vt_son{
+    width:100% ;
+    height:33.33% ;
+    border-radius: 12.5px;
+    margin: 20% 0px 0px 0px;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+/*ảnh lv nhiet độ*/
+#icon_nd_lv1{
+    width:100% ;
+    height:33.33% ;
+    border-radius: 12.5px;
+    margin: 20% 0px 0px 0px;
+    background-size: 100% 100%;
+    background-size: cover;  
+}
+#icon_nd_lv2{
+    width:100% ;
+    height:33.33% ;
+    border-radius: 12.5px;
+    margin: 20% 0px 0px 0px;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+#icon_nd_lv3{
+    width:100% ;
+    height:33.33% ;
+    border-radius: 12.5px;
+    margin: 20% 0px 0px 0px;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+.icon_vt_son_l{
+    background-image: url('./img/hoa_tuyet.png');
+}
+.icon_vt_son_n{
+    background-image: url('./img/icon_lưa.png');
+}
+/*ảnh lv độ ẩm*/
+#icon_da_lv1{
+    background-image: url('./img/giot_nuoc.png');
+}
+#icon_da_lv2{
+    background-image: url('./img/giot_nuoc.png');
+}
+#icon_da_lv3{
+    background-image: url('./img/giot_nuoc.png');
+}
+/*ảnh lv khí ga*/
+#icon_kg_lv1{
+    background-image: url('./img/gas_lv.png');
+}
+#icon_kg_lv2{
+    background-image: url('./img/gas_lv.png');
+}
+#icon_kg_lv3{
+    background-image: url('./img/gas_lv.png');
+}
+#icon_as_lv1{
+    background-image: url('./img/1f505.png');
+}
+#icon_as_lv2{
+    background-image: url('./img/1f505.png');
+}
+#icon_as_lv3{
+    background-image: url('./img/1f505.png');
+}
+/*-------------------------------clock------------------start------------------*/
+#container_clock {
+    height: 220px;
+    width: 320px; 
+    margin: 20px 0px 20px 20px;
+}
+.highcharts-figure_clock,
+.highcharts-data-table table {
+    min-width: 3000px;
+    max-width: 5000px;
+    margin: 1em auto;
+}
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #224422;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+/*---------------------clock-------------------------end-------------------*/
+/*khối backtop*/
+#backtop{
+    width: 50px;
+    height:50px;
+    background:orange;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom:40px;
+    right:20px;
+}
+@media screen and (max-with:1300px){
+    .boxn0{
+        margin: 10px 0px 0px 2.92358804%;
+        width: 10%;
+        height:10px;
+
+    }
+}
